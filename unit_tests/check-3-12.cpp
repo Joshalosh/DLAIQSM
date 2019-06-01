@@ -1,6 +1,19 @@
 #include <iostream>
 #include <vector>
 
+void PrintVectNum(std::vector<int> v)
+{
+    for (auto i : v)
+        std::cout << i << std::endl;
+        std::cout << "The size of the vector is " << v.size() << std::endl;
+}
+
+void PrintVectString(std::vector<std::string> v)
+{
+    for (auto i : v)
+        std::cout << i << std::endl;
+        std::cout << "The size of the vector is " << v.size() << std::endl;
+}
 
 int main()
 {
@@ -15,28 +28,15 @@ int main()
     std::vector<int> v5{10, 42};
     std::vector<std::string> v6{10};
     std::vector<std::string> v7{10, "hi"};
-
-    for (auto i : v1)
-        std::cout << i << std::endl;
-    std::cout << "The size of v1 is " << v1.size() << std::endl;
-    for (auto i : v2)
-        std::cout << i << std::endl;
-    std::cout << "The size of v2 is " << v2.size() << std::endl;
-    for (auto i : v3)
-        std::cout << i << std::endl;
-    std::cout << "The size of v3 is " << v3.size() << std::endl;
-    for (auto i : v4)
-        std::cout << i << std::endl;
-    std::cout << "The size of v4 is " << v4.size() << std::endl;
-    for (auto i : v5)
-        std::cout << i << std::endl;
-    std::cout << "The size of v5 is " << v5.size() << std::endl;
-    for (auto i : v6)
-        std::cout << i << std::endl;
-    std::cout << "The size of v6 is " << v6.size() << std::endl;
-    for (auto i : v7)
-        std::cout << i << std::endl;
-    std::cout << "The size of v7 is " << v7.size() << std::endl;
-       
+    
+    
+    PrintVectNum(v1);
+    PrintVectNum(v2);
+    PrintVectNum(v3);
+    PrintVectNum(v4);
+    PrintVectNum(v5);
+    PrintVectString(v6);
+    PrintVectString(v7);
+    
     return 0;
 }
