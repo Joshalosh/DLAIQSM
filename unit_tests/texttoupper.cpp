@@ -1,14 +1,22 @@
 #include <iostream>
 #include <vector>
+#include <string>
+#include <cctype>
 
 int main()
 {
-   std::string text = "this is just a parragraph that's just doing things. Typing things, all the things. Currently watching survivor, and I guess there are some interesting things going on. I feel like Andy's power is getting to his head, he's playing his cards waaaaay too early. So I guess we'll just see how that plays out for him.";
+using std::vector; using std::string; using std::cout; using std::cin; using std::isalpha;
 
-    for (auto it = text.cbegin();
-         it != text.cend(); ++it){
-        std::cout << *it << std::endl;
-        std::cout << ::toupper(*it) << std::endl;}
+    vector<string> text;
+    for (string line; getline(cin, line); text.push_back(line));
+    
+    for (auto& word : text)
+    {
+        for (auto& ch : word)
+            if (isalpha(ch)) ch = toupper(ch);
+        cout << word << " ";
+    }
+
     return 0;
 }
     
