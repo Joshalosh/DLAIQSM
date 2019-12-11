@@ -7,11 +7,11 @@ int main()
   int ja[4 * 7 - 14];
 
   std::cout << "The contents of ia is: " << std::endl;
-  for (unsigned i = 0; i <= buf_size; i++)
+  for (unsigned i : ia)
     std::cout << ia[i] << std::endl;
 
   std::cout << "The contents of ja is: " << std::endl;
-  for (unsigned i = 0; i <= sizeof(ja); i++)
+  for (unsigned i : ja)
     std::cout << ja[i] << std::endl;
 
   return 0;
