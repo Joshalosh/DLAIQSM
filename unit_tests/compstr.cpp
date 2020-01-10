@@ -1,12 +1,16 @@
 #include <iostream>
+#include <cstring>
+#include <string>
 
 int main() {
-  std::string str1;
-  std::string str2;
-  std::cin >> str1;
-  std::cin >> str2;
+  char str1[6];
+  char str2[6];
+  for (int i = 0; i <= 6; ++i)
+    std::cin >> str1[i];
+  for (int j = 0; j <= 6; ++j)
+    std::cin >> str2[j];
 
-  if (str1 == str2) {
+  if (!strcmp(str1, str2)) {
     std::cout << "The strings are the same" << std::endl;
   } else {
     std::cout << "The strings are different" << std::endl;
